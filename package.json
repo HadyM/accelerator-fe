@@ -41,6 +41,9 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.51.0"
+    "babel-jest": "^28.0.3",
+    "jest": "^28.0.3",
+    "sass": "^1.51.0",
+    "supertest": "^6.2.3"
   }
 }
