@@ -1,26 +1,31 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { apiURL } from "./util/apiURL";
 import axios from "axios";
 
 import "./App.css";
 
-const API_BASE = process.env.REACT_APP_API_SITE;
+// const API_BASE = process.env.REACT_APP_API_SITE;
+const API_BASE = apiURL();
 
 function App() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    let URL = "https://recipe-book-backend-app.herokuapp.com/recipe";
-
-    fetch(URL)
-      .then((res) => res.json())
-
-      .then((data) => setRecipes(data.payload));
+    axios
+      .get(`${API_BASE}/recipe`)
+      .then((res) => {
+        const { payload } = res.data;
+        setRecipes(payload);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
     <div className="App">
-      <h1>Awesome New Front End App</h1>
+      <h1>Recipe Book</h1>
       {recipes.map((recipe, index) => {
         return (
           <div key={index}>
