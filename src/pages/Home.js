@@ -28,6 +28,7 @@ export default function Home() {
           <div key={index}>
             <h2>{recipe.title}</h2>
             <p>{recipe.description}</p>
+            <p>{recipe.instructions}</p>
           </div>
         );
       })}
