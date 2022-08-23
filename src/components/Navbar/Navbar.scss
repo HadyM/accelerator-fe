@@ -1,0 +1,70 @@
+.Nav-bar {
+  background: #373535;
+  height: 75px;
+
+  .Logo {
+    display: block;
+    padding: 10px 0;
+
+    img {
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+nav {
+  text-align: center;
+  margin-top: -70px;
+
+  a {
+    line-height: 50px;
+    font-size: 30px;
+    display: block;
+    position: relative;
+    color: #4d4d4e;
+    text-decoration: none;
+
+    i {
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      color: #ff0000;
+
+      svg {
+        opacity: 0;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      content: "";
+      font-size: 19px;
+      letter-spacing: 2px;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+
+    &:first-child {
+      &::after {
+        content: "HOME";
+      }
+    }
+  }
+
+  a.active {
+    svg {
+      color: #ff0000;
+    }
+  }
+}

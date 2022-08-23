@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { apiURL } from "../util/apiURL";
+import { apiURL } from "../../util/apiURL";
 import axios from "axios";
 
-// const API_BASE = process.env.REACT_APP_API_SITE;
+
 const API_BASE = apiURL();
 
 export default function Home() {
@@ -33,5 +33,6 @@ export default function Home() {
         );
       })}
     </div>
+   
   );
 }
