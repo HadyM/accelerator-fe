@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { apiURL } from "../../util/apiURL";
+import RecipeCard from "../RecipeCard/RecipeCard";
 import axios from "axios";
 
 const API_BASE = apiURL();
@@ -24,11 +25,7 @@ export default function Home() {
       <h1>Recipe Book</h1>
       {recipes.map((recipe, index) => {
         return (
-          <div key={index}>
-            <h2>{recipe.title}</h2>
-            <p>{recipe.description}</p>
-            <p>{recipe.instructions}</p>
-          </div>
+        <RecipeCard recipe={recipe} key={index}/>
         );
       })}
       <div>Testing Web Hook</div>

@@ -21,7 +21,8 @@ nav {
   a {
     line-height: 50px;
     font-size: 30px;
-    display: block;
+    display: inline-block;
+    padding-inline-start: 100px;
     position: relative;
     color: #4d4d4e;
     text-decoration: none;
@@ -46,7 +47,7 @@ nav {
       content: "";
       font-size: 19px;
       letter-spacing: 2px;
-      position: absolute;
+      position: relative;
       bottom: 0;
       display: block;
       width: 100%;
@@ -59,6 +60,30 @@ nav {
       &::after {
         content: "HOME";
       }
+    }
+  }
+
+  a.recipe-link {
+    &:after {
+      content: "RECIPES";
+    }
+  }
+
+  a.cookingstyle-link {
+    &:after {
+      content: "COOKING STYLES";
+    }
+  }
+
+  a.knife-link {
+    &:after {
+      content: "KNIVES";
+    }
+  }
+
+  a.potandpan-link {
+    &:after {
+      content: "POTS & PANS";
     }
   }
 
