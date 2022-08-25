@@ -1,0 +1,12 @@
+.RecipePage {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
