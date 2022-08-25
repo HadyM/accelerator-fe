@@ -1,0 +1,39 @@
+// body {
+//   scroll-behavior: smooth;
+// }
+.Recipes {
+  //   white-space: nowrap;
+
+  .RecipeCards {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+
+    .RecipeLayout {
+      overflow-y: scroll;
+
+      h2 {
+        margin-left: auto;
+        text-align: center;
+      }
+
+      h3 {
+        margin-left: 0px;
+        text-align: center;
+      }
+
+      p {
+        margin-left: 110px;
+        font-size: 12px;
+      }
+
+      img {
+        margin-left: 50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+      }
+    }
+  }
+}
