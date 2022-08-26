@@ -23,11 +23,13 @@ const RecipeCard = () => {
   }, []);
 
   return (
-    <div className="RecipePage">
-      {recipes.map((recipe, index) => {
-        return <RecipeCards recipe={recipe} key={index} />;
-      })}
-    </div>
+    <>
+      <div className="RecipePage">
+        {recipes.map((recipe, index) => {
+          return <RecipeCards recipe={recipe} key={index} />;
+        })}
+      </div>
+    </>
   );
 };
 

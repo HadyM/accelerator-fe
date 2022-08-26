@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./RecipeCards.scss";
 
 const RecipeCards = ({ recipe }) => {
@@ -8,7 +10,9 @@ const RecipeCards = ({ recipe }) => {
       <div className="RecipeCards">
         <div className="RecipeLayout">
           <h2>{recipe.title}</h2>
-          <img src={recipe.image} alt="recipepicture" />
+          <Link to={`/recipes/${recipe?.id}`}>
+            <img src={recipe.image} alt="recipepicture" />
+          </Link>
           <h3>{recipe.description}</h3>
           <p>Time: {recipe.time}</p>
           {/* {recipeInstructions.map((recipe) => {
