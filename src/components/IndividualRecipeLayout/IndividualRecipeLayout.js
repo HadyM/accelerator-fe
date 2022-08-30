@@ -1,28 +1,10 @@
-// import {
-//   useEffect,
-//   useState,
-//   useMemo,
-//   useCallback,
-//   useLayoutEffect,
-//   useRef,
-// } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./RecipeDetails.scss";
+import "./IndividualRecipeLayout.scss";
 
 const RecipeDetails = ({ recipe }) => {
   let navigate = useNavigate();
-  // use to add a handle delete later on...
-
-//   let [recipeInstructions, setRecipeInstructions] = useState(
-//     recipe.instructions,
-//   );
-//   //   useEffect(() => {
-//   //     setRecipeInstructions(recipe.instructions.split(/\s(?=Step)/gi));
-//   //   }, [recipe.instructions, setRecipeInstructions]);
-//   useEffect(() => {
-//     setRecipeInstructions(recipe.instructions.split(/\s(?=Step)/gi));
-//   });
+  let recipeInstructions = recipe.instructions?.split(/\s(?=Step)/gi);
 
   const handleGoBack = (e) => {
     e.preventDefault();
@@ -31,7 +13,7 @@ const RecipeDetails = ({ recipe }) => {
 
   return (
     <>
-      <div className="RecipeDetails">
+      <div className="IndividualRecipeLayout">
         <div>
           <h2>{recipe.title}</h2>
         </div>
@@ -47,11 +29,11 @@ const RecipeDetails = ({ recipe }) => {
         <div>
           <h3>{recipe.ingredients}</h3>
         </div>
-
-        {/* {recipeInstructions.map((recipe) => {
-          return <ul>{recipe}</ul>;
-        })} */}
-
+        <div>
+          {recipeInstructions?.map((recipe, index) => {
+            return <ul key={index}>{recipe}</ul>;
+          })}
+        </div>
         <div>
           <button onClick={handleGoBack}>Back to Recipes</button>
         </div>

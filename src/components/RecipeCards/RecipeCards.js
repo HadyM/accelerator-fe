@@ -1,26 +1,36 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { apiURL } from "../../util/apiURL";
+import RecipeCard from "../RecipeCard/RecipeCard";
+import axios from "axios";
 
 import "./RecipeCards.scss";
 
-const RecipeCards = ({ recipe }) => {
-  //   let recipeInstructions = recipe.instructions.split(/\s(?=Step)/gi);
+const API_BASE = apiURL();
+
+const RecipeCards = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${API_BASE}/recipe`)
+      .then((res) => {
+        const { payload } = res.data;
+        setRecipes(payload);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
-      <div className="RecipeCards">
-        <div className="RecipeLayout">
-          <h2>{recipe.title}</h2>
-          <Link to={`/recipes/${recipe?.id}`}>
-            <img src={recipe.image} alt="recipepicture" />
-          </Link>
-          <h3>{recipe.description}</h3>
-          <p>Time: {recipe.time}</p>
-          {/* {recipeInstructions.map((recipe) => {
-        return <ul>{recipe}</ul>;
-      })} */}
-        </div>
+      <div className="RecipePage">
+        {recipes.map((recipe, index) => {
+          return <RecipeCard recipe={recipe} key={index} />;
+        })}
       </div>
     </>
   );
 };
+
 export default RecipeCards;
