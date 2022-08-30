@@ -12,7 +12,7 @@ const RecipeCards = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_BASE}/recipe`)
+      .get(`${API_BASE}/recipes`)
       .then((res) => {
         const { payload } = res.data;
         setRecipes(payload);

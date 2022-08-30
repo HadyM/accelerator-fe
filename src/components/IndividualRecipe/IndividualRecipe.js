@@ -18,7 +18,7 @@ const RecipeDetail = () => {
 
   const fetchRecipe = (recipeId) => {
     axios
-      .get(`${API_BASE}/recipe/${recipeId}`)
+      .get(`${API_BASE}/recipes/${recipeId}`)
       .then((res) => {
         const { payload } = res.data;
         setRecipe(payload);

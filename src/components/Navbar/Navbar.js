@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
+  faHandScissors,
   faHome,
   faKitchenSet,
   faSpoon,
@@ -19,7 +20,12 @@ const Navbar = () => {
           <img src={Cookbook} alt="logo" />
         </Link>
         <nav>
-          <NavLink exact="true" activeclassname="active" to="/" className="Home">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            to="/"
+            className="Home"
+          >
             <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
           </NavLink>
           <NavLink
@@ -37,6 +43,14 @@ const Navbar = () => {
             to="/cookingstyles"
           >
             <FontAwesomeIcon icon={faSpoon} color="#4d4d4e" />
+          </NavLink>
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="cuttingstyle-link"
+            to="/cuttingstyles"
+          >
+            <FontAwesomeIcon icon={faHandScissors} color="#4d4d4e" />
           </NavLink>
           <NavLink
             exact="true"
