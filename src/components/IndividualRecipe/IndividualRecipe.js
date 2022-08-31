@@ -36,7 +36,6 @@ const RecipeDetail = () => {
 
   return (
     <div className="IndividualRecipe">
-      
       <section>
         <IndividualRecipeLayout recipe={recipe} />
       </section>
