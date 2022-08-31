@@ -1,4 +1,51 @@
-img {
-  width: 200px;
-  height: 200px;
+.IndividualRecipeLayout {
+  margin-top: 40px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-radius: 5px;
+  // width: 500px;
+  // float: left;
+  height: 600px;
+  // position: relative;
+
+  .TitleImage {
+    display: flex;
+    justify-content: center;
+  }
+
+  h3 {
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  img {
+    margin-left: 360px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .Ingredients {
+    float: left;
+    margin: 10px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .Instructions {
+    margin-top: 10px;
+    width: 900px;
+    margin-right: 10px;
+    width: 500px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  button {
+    margin-top: 60px;
+    margin-left: 300px;
+  }
 }

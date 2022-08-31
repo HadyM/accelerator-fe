@@ -5,6 +5,7 @@ import "./IndividualRecipeLayout.scss";
 const RecipeDetails = ({ recipe }) => {
   let navigate = useNavigate();
   let recipeInstructions = recipe.instructions?.split(/\s(?=Step)/gi);
+  let recipeIngredients = recipe.ingredients?.split(",");
 
   const handleGoBack = (e) => {
     e.preventDefault();
@@ -15,28 +16,39 @@ const RecipeDetails = ({ recipe }) => {
     <>
       <div className="IndividualRecipeLayout">
         <div>
-          <h2>{recipe.title}</h2>
+          <div className="TitleImage">
+            <h2>{recipe.title}</h2>
+          </div>
+          <div>
+            <img src={recipe.image} alt="recipepicture" />
+          </div>
+          <div>
+            <h3>{recipe.description}</h3>
+          </div>
+          <div>
+            <h3>Total Cook Time: {recipe.time}</h3>
+          </div>
         </div>
-        <div>
-          <img src={recipe.image} alt="recipepicture" />
-        </div>
-        <div>
-          <h3>{recipe.description}</h3>
-        </div>
-        <div>
-          <p>Total Cook Time: {recipe.time}</p>
-        </div>
-        <div>
-          <h3>{recipe.ingredients}</h3>
-        </div>
-        <div>
-          {recipeInstructions?.map((recipe, index) => {
-            return <ul key={index}>{recipe}</ul>;
+        <div className="Ingredients">
+          {recipeIngredients?.map((ingredients, index) => {
+            return (
+              <ul key={index}>
+                <h4>{ingredients}</h4>
+              </ul>
+            );
           })}
         </div>
-        <div>
-          <button onClick={handleGoBack}>Back to Recipes</button>
+        <div className="Instructions">
+          {recipeInstructions?.map((instructions, index) => {
+            return (
+              <ul key={index}>
+                <h4>{instructions}</h4>
+              </ul>
+            );
+          })}
         </div>
+
+        <button onClick={handleGoBack}>Back to Recipes</button>
       </div>
     </>
   );

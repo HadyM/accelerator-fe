@@ -36,7 +36,7 @@ const RecipeDetail = () => {
 
   return (
     <div className="IndividualRecipe">
-      <h1>Recipe Details</h1>
+      
       <section>
         <IndividualRecipeLayout recipe={recipe} />
       </section>
