@@ -1,13 +1,15 @@
 .IndividualRecipeLayout {
   margin-top: 40px;
-  overflow-y: scroll;
-  border: 1px solid black;
   border-radius: 5px;
   height: 600px;
 
   .TitleImage {
     display: flex;
     justify-content: center;
+  }
+
+  h1 {
+    font-size: 25px;
   }
 
   h3 {
@@ -18,31 +20,120 @@
   }
 
   img {
-    margin-left: 360px;
+    margin-left: 39%;
     width: 300px;
     height: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 7px 60px rgba(95, 102, 101, 0.64);
   }
 
   .Ingredients {
     float: left;
-    margin: 10px;
-    width: 400px;
-    border: 1px solid black;
+    display: grid;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    width: 700px;
+    border: 2px solid black;
     border-radius: 5px;
+    grid-template-columns: repeat(5, 140px);
+    background-color: antiquewhite;
+    font-family: Coolvetica;
+    font-weight: 400;
+    font-size: 13px;
   }
 
   .Instructions {
     margin-top: 10px;
-    width: 900px;
-    margin-right: 10px;
+    margin-right: 20px;
+    padding: 30px;
     width: 500px;
     float: right;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
+    background-color: antiquewhite;
+    font-family: Coolvetica;
+    font-weight: 400;
+    font-size: 13px;
   }
 
   button {
-    margin-top: 60px;
-    margin-left: 300px;
+    margin-left: 80%;
+    min-width: 200px;
+    min-height: 40px;
+    font-family: Coolvetica;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    color: #313133;
+    background: rgb(250, 235, 215);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(95, 102, 101, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+  }
+
+  button::before {
+    content: "";
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 4px solid antiquewhite;
+    box-shadow: 0 0 60px rgba(95, 102, 101, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  button:hover,
+  button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+
+  button:hover::before,
+  button:focus::before {
+    opacity: 1;
+  }
+
+  button::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid rgb(151, 150, 148);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+
+  button:hover::after,
+  button:focus::after {
+    animation: none;
+    display: none;
+  }
+
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
   }
 }

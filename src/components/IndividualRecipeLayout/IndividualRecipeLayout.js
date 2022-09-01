@@ -16,8 +16,9 @@ const RecipeDetails = ({ recipe }) => {
     <>
       <div className="IndividualRecipeLayout">
         <div>
+          <button onClick={handleGoBack}>Back to Recipes</button>
           <div className="TitleImage">
-            <h2>{recipe.title}</h2>
+            <h1>{recipe.title}</h1>
           </div>
           <div>
             <img src={recipe.image} alt="recipepicture" />
@@ -47,8 +48,6 @@ const RecipeDetails = ({ recipe }) => {
             );
           })}
         </div>
-
-        <button onClick={handleGoBack}>Back to Recipes</button>
       </div>
     </>
   );

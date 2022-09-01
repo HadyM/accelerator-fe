@@ -21,6 +21,14 @@ textarea {
   font-family: "Helvetica Neue";
 }
 
+body {
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .loader-active {
   display: block;
   position: absolute;
