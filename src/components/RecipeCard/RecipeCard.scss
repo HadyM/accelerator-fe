@@ -1,7 +1,7 @@
 .RecipeCard {
   border: 1px solid black;
   border-radius: 10px;
-  width: 300px;
+  width: 250px;
   background-color: antiquewhite;
   box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.599);
   margin-top: 50px;
@@ -23,13 +23,13 @@
     }
 
     p {
-      margin-left: 110px;
+      text-align: center;
       font-size: 12px;
       font-weight: 600;
     }
 
     img {
-      margin-left: 50px;
+      margin-left: 25px;
       width: 200px;
       height: 200px;
       border-radius: 15px;
