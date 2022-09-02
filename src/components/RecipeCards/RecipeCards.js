@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { apiURL } from "../../util/apiURL";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import axios from "axios";
+import Loader from "react-loaders";
 
 import "./RecipeCards.scss";
 
@@ -29,6 +30,7 @@ const RecipeCards = () => {
           return <RecipeCard recipe={recipe} key={index} />;
         })}
       </div>
+      <Loader type="cube-transition" />
     </>
   );
 };

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./IndividualRecipeLayout.scss";
 
-const RecipeDetails = ({ recipe }) => {
+const IndividualRecipeLayout = ({ recipe }) => {
   let navigate = useNavigate();
   let recipeInstructions = recipe.instructions?.split(/\s(?=Step)/gi);
   let recipeIngredients = recipe.ingredients?.split(",");
@@ -53,4 +53,4 @@ const RecipeDetails = ({ recipe }) => {
   );
 };
 
-export default RecipeDetails;
+export default IndividualRecipeLayout;

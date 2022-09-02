@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { apiURL } from "../../util/apiURL";
 import CookingStyleCard from "../CookingStyleCard/CookingStyleCard";
 import axios from "axios";
+import Loader from "react-loaders";
 
 import "./CookingStyleCards.scss";
 
@@ -24,11 +25,12 @@ const CookingStyleCards = () => {
 
   return (
     <>
-      <div className="RecipePage">
+      <div className="CookingStylePage">
         {cookingstyles.map((cookingstyle, index) => {
           return <CookingStyleCard cookingstyle={cookingstyle} key={index} />;
         })}
       </div>
+      <Loader type="cube-transition" />
     </>
   );
 };

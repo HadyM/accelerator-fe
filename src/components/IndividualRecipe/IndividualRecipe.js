@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { apiURL } from "../../util/apiURL";
 import axios from "axios";
+import Loader from "react-loaders";
 
 import IndividualRecipeLayout from "../IndividualRecipeLayout/IndividualRecipeLayout";
 
@@ -9,7 +10,7 @@ import "./IndividualRecipe.scss";
 
 const API_BASE = apiURL();
 
-const RecipeDetail = () => {
+const IndividualRecipe = () => {
   let location = useLocation();
   const [recipe, setRecipe] = useState(location.state?.recipe || {});
 
@@ -35,12 +36,15 @@ const RecipeDetail = () => {
   }, [recipe, recipeId]);
 
   return (
-    <div className="IndividualRecipe">
-      <section>
-        <IndividualRecipeLayout recipe={recipe} />
-      </section>
-    </div>
+    <>
+      <div className="IndividualRecipe">
+        <section>
+          <IndividualRecipeLayout recipe={recipe} />
+        </section>
+      </div>
+      <Loader type="cube-transition" />
+    </>
   );
 };
 
-export default RecipeDetail;
+export default IndividualRecipe;
