@@ -30,7 +30,7 @@ const CookingStyleCards = () => {
           return <CookingStyleCard cookingstyle={cookingstyle} key={index} />;
         })}
       </div>
-      <Loader type="cube-transition" />
+      <Loader type="ball-scale-multiple" />
     </>
   );
 };

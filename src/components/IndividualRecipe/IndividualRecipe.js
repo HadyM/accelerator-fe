@@ -42,7 +42,7 @@ const IndividualRecipe = () => {
           <IndividualRecipeLayout recipe={recipe} />
         </section>
       </div>
-      <Loader type="cube-transition" />
+      <Loader type="ball-scale-multiple" />
     </>
   );
 };

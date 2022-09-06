@@ -44,7 +44,7 @@ const IndividualCookingStyle = () => {
           <IndividualCookingStyleLayout cookingstyle={cookingstyle} />
         </section>
       </div>
-      <Loader type="cube-transition" />
+      <Loader type="ball-scale-multiple" />
     </>
   );
 };
