@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
-import { apiURL } from "../../util/apiURL";
+import { getCookingStyles } from "../../util/apiURL";
+// import { apiURL } from "../../util/apiURL";
 import CookingStyleCard from "../CookingStyleCard/CookingStyleCard";
-import axios from "axios";
+// import axios from "axios";
 import Loader from "react-loaders";
 
 import "./CookingStyleCards.scss";
 
-const API_BASE = apiURL();
+// const API_BASE = apiURL();
 
 const CookingStyleCards = () => {
   const [cookingstyles, setCookingStyles] = useState([]);
 
+  // useEffect(() => {
+  //   axios
+  //     .get(`${API_BASE}/cookingstyles`)
+  //     .then((res) => {
+  //       const { payload } = res.data;
+  //       setCookingStyles(payload);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get(`${API_BASE}/cookingstyles`)
-      .then((res) => {
-        const { payload } = res.data;
-        setCookingStyles(payload);
+    getCookingStyles()
+      .then((response) => {
+        setCookingStyles(response);
       })
       .catch((err) => {
         console.log(err);

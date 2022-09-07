@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { apiURL } from "../../util/apiURL";
-import axios from "axios";
+import { getCookingStyleId } from "../../util/apiURL";
+// import { apiURL } from "../../util/apiURL";
+// import axios from "axios";
 import Loader from "react-loaders";
 
 import IndividualCookingStyleLayout from "../IndividualCookingStyleLayout/IndividualCookingStyleLayout";
 
 import "./IndividualCookingStyle.scss";
 
-const API_BASE = apiURL();
+// const API_BASE = apiURL();
 
 const IndividualCookingStyle = () => {
   let location = useLocation();
@@ -19,12 +20,22 @@ const IndividualCookingStyle = () => {
   let params = useParams();
   let cookingStyleId = params.id;
 
-  const fetchCookingStyle = (cookingStyleId) => {
-    axios
-      .get(`${API_BASE}/cookingstyles/${cookingStyleId}`)
-      .then((res) => {
-        const { payload } = res.data;
-        setCookingStyle(payload);
+  // const fetchCookingStyle = (cookingStyleId) => {
+  //   axios
+  //     .get(`${API_BASE}/cookingstyles/${cookingStyleId}`)
+  //     .then((res) => {
+  //       const { payload } = res.data;
+  //       setCookingStyle(payload);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
+  const fetchCookingStyle = () => {
+    getCookingStyleId()
+      .then((response) => {
+        setCookingStyle(response);
       })
       .catch((err) => {
         console.log(err);

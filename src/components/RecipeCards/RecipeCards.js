@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
-import { apiURL } from "../../util/apiURL";
+// import { apiURL } from "../../util/apiURL";
+import { getRecipes } from "../../util/apiURL";
 import RecipeCard from "../RecipeCard/RecipeCard";
-import axios from "axios";
+// import axios from "axios";
 import Loader from "react-loaders";
 
 import "./RecipeCards.scss";
 
-const API_BASE = apiURL();
+// const API_BASE = apiURL();
 
 const RecipeCards = () => {
   const [recipes, setRecipes] = useState([]);
 
+  // useEffect(() => {
+  //   axios
+  //     .get(`${API_BASE}/recipes`)
+  //     .then((res) => {
+  //       const { payload } = res.data;
+  //       setRecipes(payload);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get(`${API_BASE}/recipes`)
-      .then((res) => {
-        const { payload } = res.data;
-        setRecipes(payload);
+    getRecipes()
+      .then((response) => {
+        setRecipes(response);
       })
       .catch((err) => {
         console.log(err);
