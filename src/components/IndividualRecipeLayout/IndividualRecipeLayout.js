@@ -1,22 +1,22 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import "./IndividualRecipeLayout.scss";
 
 const IndividualRecipeLayout = ({ recipe }) => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   let recipeInstructions = recipe.instructions?.split(/\s(?=Step)/gi);
   let recipeIngredients = recipe.ingredients?.split(",");
 
-  const handleGoBack = (e) => {
-    e.preventDefault();
-    navigate("/recipes");
-  };
+  // const handleGoBack = (e) => {
+  //   e.preventDefault();
+  //   navigate("/recipes");
+  // };
 
   return (
     <>
       <div className="IndividualRecipeLayout">
         <div>
-          <button onClick={handleGoBack}>Back to Recipes</button>
+          {/* <button onClick={handleGoBack}>Back to Recipes</button> */}
           <div className="TitleImage">
             <h1>{recipe.title}</h1>
           </div>

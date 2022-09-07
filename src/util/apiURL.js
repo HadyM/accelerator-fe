@@ -28,7 +28,3 @@ export const getCuttingStyles = async () => {
   const response = await apiURL.get("/cuttingstyles");
   return response.data.payload;
 };
-
-// export const apiURL = () => {
-//   return "https://recipe-book-backend-app.adaptable.app";
-// };

@@ -6,6 +6,7 @@ import RecipeCards from "./components/RecipeCards/RecipeCards";
 import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipe";
 import CookingStyleCards from "./components/CookingStyleCards/CookingStyleCards";
 import IndividualCookingStyle from "./components/IndividualCookingStyle/IndividualCookingStyle";
+import CuttingStyleCards from "./components/CuttingStyleCards/CuttingStyleCards";
 
 import "./App.scss";
 
@@ -22,6 +23,7 @@ function App() {
             path="/cookingstyles/:id"
             element={<IndividualCookingStyle />}
           />
+          <Route exact path="/cuttingstyles" element={<CuttingStyleCards />} />
         </Route>
       </Routes>
     </>
