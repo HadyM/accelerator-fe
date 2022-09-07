@@ -15,9 +15,9 @@ const IndividualRecipeLayout = ({ recipe }) => {
   return (
     <>
       <div className="IndividualRecipeLayout">
-        <div>
+        <div className="TitleImage">
           {/* <button onClick={handleGoBack}>Back to Recipes</button> */}
-          <div className="TitleImage">
+          <div>
             <h1>{recipe.title}</h1>
           </div>
           <div>
