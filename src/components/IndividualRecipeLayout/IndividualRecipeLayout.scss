@@ -1,5 +1,5 @@
 .IndividualRecipeLayout {
-  margin-top: 40px;
+  margin-top: 70px;
 
   .TitleImage {
     float: left;
@@ -35,10 +35,10 @@
     margin-top: 10px;
     margin-right: 20px;
     padding: 10px;
-    width: 700px;
+    width: 600px;
     border: 2px solid black;
     border-radius: 5px;
-    grid-template-columns: repeat(5, 140px);
+    grid-template-columns: repeat(5, 120px);
     background-color: antiquewhite;
     font-family: Coolvetica;
     font-weight: 400;
@@ -49,8 +49,8 @@
     position: relative;
     display: inline-block;
     margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px; 
+    // margin-right: 20px;
     padding: 30px;
     width: 92%;
     border: 2px solid black;
