@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
+import "./ComponentToPrint.scss";
+
 const ComponentToPrint = ({ recipe }) => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -12,39 +14,54 @@ const ComponentToPrint = ({ recipe }) => {
 
   return (
     <>
-      <div style={{ display: "none" }}>
+      <div className="RecipePrint">
         <div ref={componentRef}>
-          <div>
+          <div style={{ textAlign: "center" }}>
             <h1>{recipe.title}</h1>
           </div>
-          <div>
-            <h3>{recipe.description}</h3>
+          <div className="PrintTime" style={{ display: "flex", gap: "10px" }}>
+            <h2>Total Cook Time: </h2>
+            <h2>{recipe.time}</h2>
           </div>
-          <div>
-            <h3>Total Cook Time: {recipe.time}</h3>
+          <div className="PrintIngredients">
+            <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+              Ingredients:
+            </h2>
+            <div
+              className="PrintIngredientsList"
+              style={{ columnCount: "3", columnGap: "10px" }}
+            >
+              <h3>
+                {recipeIngredients?.map((ingredients, index) => {
+                  return (
+                    <ul key={index}>
+                      <h4>{ingredients}</h4>
+                    </ul>
+                  );
+                })}
+              </h3>
+            </div>
           </div>
-          <div className="Ingredients">
-            {recipeIngredients?.map((ingredients, index) => {
-              return (
-                <ul key={index}>
-                  <h4>{ingredients}</h4>
-                </ul>
-              );
-            })}
-          </div>
-          <div className="Instructions">
-            {recipeInstructions?.map((instructions, index) => {
-              return (
-                <ul key={index}>
-                  <h4>{instructions}</h4>
-                </ul>
-              );
-            })}
+          <div className="PrintInstructions">
+            <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+              Instructions:
+            </h2>
+            <div className="PrintInstructionsList">
+              <h3>
+                {recipeInstructions?.map((instructions, index) => {
+                  return (
+                    <ul key={index}>
+                      <h4>{instructions}</h4>
+                    </ul>
+                  );
+                })}
+              </h3>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <button onClick={handlePrint}>Print this out!</button>
+      <div className="PrintButton">
+        <button onClick={handlePrint}>Print this Recipe!</button>
       </div>
     </>
   );
