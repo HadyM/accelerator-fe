@@ -1,40 +1,38 @@
-@media all {
-  .RecipePrint {
-    display: none;
+.RecipePrint {
+  display: none;
 
-    h1 {
+  h1 {
+    text-align: center;
+  }
+
+  .PrintTime {
+    display: flex;
+    gap: 10px;
+  }
+
+  .PrintIngredients {
+    h2 {
       text-align: center;
+      margin-bottom: 20px;
     }
 
-    .PrintTime {
-      display: flex;
-      gap: 10px;
-    }
-
-    .PrintIngredients {
-      h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .PrintIngredientsList {
-        column-count: 3;
-        column-gap: 10px;
-      }
-    }
-
-    .PrintInstructions {
-      h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+    .PrintIngredientsList {
+      column-count: 3;
+      column-gap: 10px;
     }
   }
 
-  .PrintButton {
-    button {
-      margin: 0 auto;
-      display: block;
+  .PrintInstructions {
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
+  }
+}
+
+.PrintButton {
+  button {
+    margin: 0 auto;
+    display: block;
   }
 }
