@@ -1,0 +1,20 @@
+article {
+  margin: 1em;
+  padding: 1em;
+  background-color: #49111c;
+  color: whitesmoke;
+  border-radius: 15px;
+}
+
+.RecipeCardList {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 40px;
+  row-gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: 0 auto;
+}

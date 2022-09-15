@@ -1,0 +1,43 @@
+header {
+  background-color: #49111c;
+  margin-top: 30px;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Search {
+  width: 95%;
+  border: 2px solid #000;
+  border-radius: 2em;
+  overflow: hidden;
+  font-size: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Search:focus-within {
+  box-shadow: 2px 2px 5px #000;
+}
+
+.SearchButton,
+.SearchInput {
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+.SearchInput {
+  padding: 1em;
+  width: 85%;
+}
+
+.SearchButton {
+  width: 15%;
+  font-size: 1.5rem;
+  padding-right: 0.5em;
+  color: gray;
+  display: grid;
+  place-content: center;
+}
