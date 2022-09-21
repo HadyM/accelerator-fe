@@ -8,7 +8,7 @@ const CookingStyleCard = ({ cookingstyle }) => {
       <div className="CookingStyleCard">
         <div className="CookingStyleLayout">
           <Link
-            to={`/cookingstyles/${cookingstyle?.id}`}
+            to={`/recipes?cookingstyle=${cookingstyle.name}`}
             state={{ cookingstyle: cookingstyle }}
           >
             <h2>{cookingstyle.name}</h2>
