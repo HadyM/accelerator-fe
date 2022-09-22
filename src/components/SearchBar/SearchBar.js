@@ -13,7 +13,7 @@ const SearchBar = ({ recipes, setSearchResults }) => {
     const resultsArray = recipes.filter(
       (recipe) =>
         recipe.title.includes(e.target.value) ||
-        recipe.ingredients.includes(e.target.value),
+        recipe.time.includes(e.target.value),
     );
 
     setSearchResults(resultsArray);

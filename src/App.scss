@@ -1,4 +1,6 @@
-$primary-color: #ff0000;
+@use "./assets/colors/colorpalette" as c;
+
+$primary-color: c.$dark-sienna;
 
 @import "animate.css";
 @import "~loaders.css/src/animations/ball-scale-multiple.scss";

@@ -20,6 +20,9 @@ const CookingStyleCards = () => {
 
   return (
     <>
+      <div className="CookingStyleTitle">
+        <h1>Recipes Based On Cooking Style</h1>
+      </div>
       <div className="CookingStylePage">
         {cookingstyles.map((cookingstyle, index) => {
           return <CookingStyleCard cookingstyle={cookingstyle} key={index} />;

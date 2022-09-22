@@ -1,5 +1,7 @@
+@use "../../assets/colors/colorpalette" as c;
+
 .Nav-bar {
-  background: #373535;
+  background: c.$smoky-black;
   height: 75px;
 
   .Logo {
@@ -18,22 +20,21 @@ nav {
   text-align: center;
   margin-top: -70px;
 
-
   a {
     line-height: 50px;
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
-    padding-inline-start: 55px;
+    padding-inline-start: 85px;
     position: relative;
-    color: #4d4d4e;
     text-decoration: none;
+    color: c.$anti-flash-white;
 
     i {
       transition: all 0.3s ease-out;
     }
 
     &:hover {
-      color: #ff0000;
+      color: c.$dark-sienna;
 
       svg {
         opacity: 0;
@@ -46,14 +47,14 @@ nav {
 
     &:after {
       content: "";
-      font-size: 17px;
+      font-size: 16px;
       letter-spacing: -1px;
       position: relative;
       bottom: 0;
-      display: block;
       width: 100%;
       text-align: center;
       opacity: 0;
+      color: c.$anti-flash-white;
       transition: all 0.3s ease-out;
     }
 
@@ -96,7 +97,7 @@ nav {
 
   a.active {
     svg {
-      color: #ff0000;
+      color: c.$anti-flash-white;
     }
   }
 }

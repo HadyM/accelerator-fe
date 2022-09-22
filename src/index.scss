@@ -1,3 +1,5 @@
+@use "./assets/colors/colorpalette" as c;
+
 html {
   font-size: 62.5%;
 }
@@ -5,9 +7,7 @@ html {
 body {
   margin: 0;
   font: 300 11px/1.4 "Helvetica Neue", "sans-serif";
-  color: #444;
-  /* background: #022c43; */
-  background: blanchedalmond;
+  background: c.$grullo;
   overflow: hidden;
   display: block;
   -webkit-font-smoothing: antialiased;

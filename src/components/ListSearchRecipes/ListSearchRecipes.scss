@@ -1,8 +1,10 @@
+@use "../../assets/colors/colorpalette" as c;
+
 article {
   margin: 1em;
   padding: 1em;
-  background-color: #49111c;
-  color: whitesmoke;
+  background-color: c.$dark-sienna;
+  color: c.$anti-flash-white;
   border-radius: 15px;
 }
 

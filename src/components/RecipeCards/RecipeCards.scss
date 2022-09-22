@@ -1,3 +1,5 @@
+@use "../../assets/colors/colorpalette" as c;
+
 .RecipePage {
   position: relative;
   display: flex;
@@ -10,4 +12,11 @@
   max-width: 1000px;
   margin: 0 auto;
   animation: fadeIn 6s;
+}
+.RecipeTitle {
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 25px;
+  color: c.$dark-sienna;
 }

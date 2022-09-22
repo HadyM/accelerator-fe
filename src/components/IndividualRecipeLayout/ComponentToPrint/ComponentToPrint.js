@@ -19,7 +19,10 @@ const ComponentToPrint = ({ recipe }) => {
           <div style={{ textAlign: "center" }}>
             <h1>{recipe.title}</h1>
           </div>
-          <div className="PrintTime" style={{ display: "flex", gap: "10px" }}>
+          <div
+            className="PrintTime"
+            style={{ display: "flex", gap: "10px", marginLeft: "30px" }}
+          >
             <h2>Total Cook Time: </h2>
             <h2>{recipe.time}</h2>
           </div>
@@ -29,7 +32,7 @@ const ComponentToPrint = ({ recipe }) => {
             </h2>
             <div
               className="PrintIngredientsList"
-              style={{ columnCount: "3", columnGap: "10px" }}
+              style={{ columnCount: "3", columnGap: "10px", margin: "20px" }}
             >
               <h3>
                 {recipeIngredients?.map((ingredients, index) => {
@@ -46,7 +49,10 @@ const ComponentToPrint = ({ recipe }) => {
             <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
               Instructions:
             </h2>
-            <div className="PrintInstructionsList">
+            <div
+              className="PrintInstructionsList"
+              style={{ marginRight: "20px" }}
+            >
               <h3>
                 {recipeInstructions?.map((instructions, index) => {
                   return (

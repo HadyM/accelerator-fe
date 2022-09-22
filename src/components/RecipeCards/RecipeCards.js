@@ -26,11 +26,17 @@ const RecipeCards = () => {
   let recipesByCookingStyle =
     cookingStyle === "All"
       ? recipes
-      : recipes.filter((recipe) => recipe.cookingStyle === cookingStyle);
+      : recipes.filter(
+          (recipe) => recipe.cookingstyle === cookingStyle.toLowerCase(),
+        );
+
+  console.log(cookingStyle, recipesByCookingStyle);
 
   return (
     <>
-      <h3>{cookingStyle} Recipes</h3>
+      <div className="RecipeTitle">
+        <h1>{cookingStyle} Recipes</h1>
+      </div>
       <div className="RecipePage">
         {recipesByCookingStyle.map((recipe, index) => {
           return <RecipeCard recipe={recipe} key={index} />;
