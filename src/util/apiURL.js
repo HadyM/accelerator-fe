@@ -28,3 +28,13 @@ export const getCuttingStyles = async () => {
   const response = await apiURL.get("/cuttingstyles");
   return response.data.payload;
 };
+
+export const getKnives = async () => {
+  const response = await apiURL.get("/knives");
+  return response.data.payload;
+};
+
+export const getPotsAndPans = async () => {
+  const response = await apiURL.get("/potsandpans");
+  return response.data.payload;
+};
