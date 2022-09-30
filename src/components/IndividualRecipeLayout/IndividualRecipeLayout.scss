@@ -1,3 +1,5 @@
+@use "../../assets/colors/colorpalette" as c;
+
 .IndividualRecipeLayout {
   margin-top: 70px;
 
@@ -11,17 +13,19 @@
       font-size: 25px;
       text-align: center;
       margin-top: 0px;
+      color: c.$anti-flash-white;
     }
 
     h3 {
       text-align: center;
       width: 500px;
-      margin-left: 50px;
+      margin-left: 20px;
       padding-top: 10px;
+      color: c.$anti-flash-white;
     }
 
     img {
-      margin-left: 120px;
+      margin-left: 110px;
       width: 300px;
       height: 300px;
       border-radius: 20px;
@@ -39,7 +43,8 @@
     border: 2px solid black;
     border-radius: 5px;
     grid-template-columns: repeat(5, 120px);
-    background-color: antiquewhite;
+    background-color: c.$grullo;
+    color: c.$dark-sienna;
     font-family: Coolvetica;
     font-weight: 400;
     font-size: 13px;
@@ -54,7 +59,8 @@
     width: 92%;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color: c.$grullo;
+    color: c.$dark-sienna;
     font-family: Coolvetica;
     font-weight: 400;
     font-size: 13px;

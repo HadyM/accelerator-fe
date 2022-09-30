@@ -35,10 +35,10 @@ const IndividualRecipe = () => {
     <>
       <div className="IndividualRecipe">
         <section>
-          <IndividualRecipeLayout recipe={recipe} />
           <div>
             <ComponentToPrint recipe={recipe} />
           </div>
+          <IndividualRecipeLayout recipe={recipe} />
         </section>
       </div>
       <Loader type="ball-scale-multiple" />

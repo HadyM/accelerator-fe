@@ -1,31 +1,36 @@
+@use "../../assets/colors/colorpalette" as c;
+
 .RecipeCard {
-  border: 1px solid black;
+  border: 1px solid c.$smoky-black;
   border-radius: 10px;
   width: 250px;
-  background-color: antiquewhite;
-  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.599);
+  background-color: c.$grullo;
+  box-shadow: 3px 5px 15px c.$anti-flash-white;
   margin-top: 50px;
 
   .RecipeLayout {
     a {
       text-decoration: none;
-      color: black;
+      color: c.$smoky-black;
     }
 
     h2 {
       margin-left: auto;
       text-align: center;
+      color: c.$anti-flash-white;
     }
 
     h3 {
       margin-left: 0px;
       text-align: center;
+      color: c.$dark-sienna;
     }
 
     p {
       text-align: center;
       font-size: 12px;
       font-weight: 600;
+      color: c.$anti-flash-white;
     }
 
     img {
@@ -33,7 +38,7 @@
       width: 200px;
       height: 200px;
       border-radius: 15px;
-      box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.599);
+      box-shadow: 3px 5px 15px c.$smoky-black;
     }
   }
 
@@ -46,12 +51,12 @@
     height: 100%;
     position: absolute;
     z-index: -1;
-    border: 2px solid rgba(0, 0, 0, 0.4);
+    border: 2px solid c.$smoky-black;
     border-radius: 10px;
     transition: all 0.25s ease-out;
   }
   &::before {
-    background-color: rgba(196, 185, 183, 0.4);
+    background-color: c.$dark-sienna;
     top: -15px;
     left: -15px;
   }

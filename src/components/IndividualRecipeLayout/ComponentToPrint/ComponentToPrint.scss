@@ -1,3 +1,5 @@
+@use "../../../assets/colors/colorpalette" as c;
+
 .RecipePrint {
   display: none;
 
@@ -32,7 +34,22 @@
 
 .PrintButton {
   button {
-    margin: 0 auto;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
     display: block;
+    color: c.$dark-sienna;
+    font-family: Coolvetica;
+    font-weight: 700;
+    background-color: c.$grullo;
+    border: 2px solid c.$smoky-black;
+    border-radius: 5px;
+    box-shadow: 2px 3px 6px c.$dark-sienna;
+  }
+
+  button:hover {
+    color: c.$anti-flash-white;
+    background-color: c.$smoky-black;
+    box-shadow: 2px 3px 6px c.$anti-flash-white;
   }
 }
