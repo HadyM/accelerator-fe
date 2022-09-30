@@ -12,7 +12,7 @@ const SearchBar = ({ recipes, setSearchResults }) => {
 
     const resultsArray = recipes.filter(
       (recipe) =>
-        recipe.title.includes(e.target.value) ||
+        recipe.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
         recipe.time.includes(e.target.value),
     );
 
