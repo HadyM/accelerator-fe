@@ -67,7 +67,7 @@ const ComponentToPrint = ({ recipe }) => {
         </div>
       </div>
       <div className="PrintButton">
-        <button onClick={handlePrint}>Print this Recipe!</button>
+        <button onClick={handlePrint}>Print Recipe!</button>
       </div>
     </>
   );

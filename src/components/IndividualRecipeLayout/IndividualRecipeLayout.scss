@@ -38,11 +38,12 @@
     display: grid;
     margin-top: 10px;
     margin-right: 20px;
+    letter-spacing: 0.4px;
     padding: 10px;
-    width: 600px;
+    width: 610px;
     border: 2px solid black;
     border-radius: 5px;
-    grid-template-columns: repeat(5, 120px);
+    grid-template-columns: repeat(5, 122px);
     background-color: c.$grullo;
     color: c.$dark-sienna;
     font-family: Coolvetica;
@@ -55,6 +56,7 @@
     display: inline-block;
     margin-top: 30px;
     margin-left: 10px;
+    letter-spacing: 0.8px;
     padding: 30px;
     width: 92%;
     border: 2px solid black;
@@ -62,7 +64,7 @@
     background-color: c.$grullo;
     color: c.$dark-sienna;
     font-family: Coolvetica;
-    font-weight: 400;
+    font-weight: lighter;
     font-size: 13px;
   }
 }
