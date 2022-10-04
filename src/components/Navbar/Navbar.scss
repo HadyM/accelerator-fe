@@ -21,8 +21,8 @@ nav {
   margin-top: -70px;
 
   a {
-    line-height: 50px;
-    font-size: 40px;
+    line-height: 25px;
+    font-size: 25px;
     display: inline-block;
     padding-inline-start: 85px;
     position: relative;
@@ -34,70 +34,75 @@ nav {
     }
 
     &:hover {
-      color: c.$dark-sienna;
+      color: c.$anti-flash-white;
 
       svg {
-        opacity: 0;
+        opacity: 1;
+        color: c.$dark-sienna;
       }
 
       &:after {
         opacity: 1;
+        color: c.$dark-sienna;
       }
     }
 
     &:after {
-      content: "";
       font-size: 16px;
-      letter-spacing: -1px;
-      position: relative;
+      letter-spacing: 1px;
       bottom: 0;
       width: 100%;
       text-align: center;
-      opacity: 0;
       color: c.$anti-flash-white;
       transition: all 0.3s ease-out;
     }
 
     &:first-child {
       &::after {
-        content: "HOME";
+        display: block;
+        content: "Home";
       }
     }
   }
 
   a.recipe-link {
     &:after {
-      content: "RECIPES";
+      display: block;
+      content: "Recipes";
     }
   }
 
   a.cookingstyle-link {
     &:after {
-      content: "COOKING STYLES";
+      display: block;
+      content: "Cooking Styles";
     }
   }
 
   a.cuttingstyle-link {
     &:after {
-      content: "CUTTING STYLES";
+      display: block;
+      content: "Cutting Styles";
     }
   }
 
   a.knife-link {
     &:after {
-      content: "KNIVES";
+      display: block;
+      content: "Knives";
     }
   }
 
   a.potandpan-link {
     &:after {
-      content: "POTS & PANS";
+      display: block;
+      content: "Pots & Pans";
     }
   }
 
   a.active {
     svg {
-      color: c.$anti-flash-white;
+      color: c.$dark-sienna;
     }
   }
 }
