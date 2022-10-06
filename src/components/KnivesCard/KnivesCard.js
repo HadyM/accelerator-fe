@@ -1,10 +1,19 @@
-import React from 'react'
-import "./KnivesCard.scss"
+import React from "react";
 
-const KnivesCard = () => {
+import "./KnivesCard.scss";
+
+const KnivesCard = ({ knife }) => {
   return (
-    <div>KnivesCard</div>
-  )
-}
+    <>
+      <div className="KnivesCard">
+        <div className="KnivesLayout">
+          <h2>{knife.name}</h2>
+          <img src={knife.image} alt="knifepicture" />
+          <h3>{knife.description}</h3>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default KnivesCard
+export default KnivesCard;

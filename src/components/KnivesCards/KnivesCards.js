@@ -1,10 +1,33 @@
-import React from 'react'
-import "./KnivesCards.scss"
+import { useState, useEffect } from "react";
+import { getKnives } from "../../util/apiURL";
+import KnivesCard from "../KnivesCard/KnivesCard";
+import Loader from "react-loaders";
+
+import "./KnivesCards.scss";
 
 const KnivesCards = () => {
-  return (
-    <div>KnivesCards</div>
-  )
-}
+  const [knives, setKnives] = useState([]);
 
-export default KnivesCards
+  useEffect(() => {
+    getKnives()
+      .then((response) => {
+        setKnives(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  return (
+    <>
+      <div className="KnivesPage">
+        {knives.map((knife, index) => {
+          return <KnivesCard knife={knife} key={index} />;
+        })}
+      </div>
+      <Loader type="ball-scale-multiple" />
+    </>
+  );
+};
+
+export default KnivesCards;
