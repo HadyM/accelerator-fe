@@ -1,0 +1,12 @@
+.KnivesPage {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 40px;
+  row-gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  animation: fadeIn 6s;
+}
