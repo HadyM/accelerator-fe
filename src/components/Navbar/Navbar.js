@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
-  faHandScissors,
   faHome,
   faKitchenSet,
   faSpoon,
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
+import { TbSlice } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
 import Cookbook from "../../assets/images/cookbook.png";
 
@@ -26,7 +26,7 @@ const Navbar = () => {
             to="/"
             className="Home"
           >
-            <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faHome} />
           </NavLink>
           <NavLink
             exact="true"
@@ -34,7 +34,7 @@ const Navbar = () => {
             className="recipe-link"
             to="/recipes"
           >
-            <FontAwesomeIcon icon={faBook} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faBook} />
           </NavLink>
           <NavLink
             exact="true"
@@ -42,7 +42,7 @@ const Navbar = () => {
             className="cookingstyle-link"
             to="/cookingstyles"
           >
-            <FontAwesomeIcon icon={faSpoon} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faSpoon} />
           </NavLink>
           <NavLink
             exact="true"
@@ -50,7 +50,7 @@ const Navbar = () => {
             className="cuttingstyle-link"
             to="/cuttingstyles"
           >
-            <FontAwesomeIcon icon={faHandScissors} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faUtensils} />
           </NavLink>
           <NavLink
             exact="true"
@@ -58,7 +58,7 @@ const Navbar = () => {
             className="knife-link"
             to="/knives"
           >
-            <FontAwesomeIcon icon={faUtensils} color="#4d4d4e" />
+            <TbSlice className="knife-link" />
           </NavLink>
           <NavLink
             exact="true"
@@ -66,7 +66,7 @@ const Navbar = () => {
             className="potandpan-link"
             to="/potsandpans"
           >
-            <FontAwesomeIcon icon={faKitchenSet} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faKitchenSet} />
           </NavLink>
         </nav>
       </div>

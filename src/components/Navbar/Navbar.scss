@@ -18,10 +18,10 @@
 
 nav {
   text-align: center;
-  margin-top: -70px;
+  margin-top: -75px;
 
   a {
-    line-height: 25px;
+    line-height: 20px;
     font-size: 25px;
     display: inline-block;
     padding-inline-start: 85px;
@@ -87,6 +87,8 @@ nav {
   }
 
   a.knife-link {
+    font-size: 32px;
+
     &:after {
       display: block;
       content: "Knives";
