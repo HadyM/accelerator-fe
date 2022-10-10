@@ -1,0 +1,70 @@
+@use "../../assets/colors/colorpalette" as c;
+
+.PotsAndPansCard {
+  border: 1px solid c.$smoky-black;
+  border-radius: 10px;
+  width: 250px;
+  background-color: c.$grullo;
+  box-shadow: 3px 5px 15px c.$anti-flash-white;
+  margin-top: 50px;
+
+  .PotsAndPansLayout {
+    a {
+      text-decoration: none;
+      color: c.$smoky-black;
+    }
+
+    h2 {
+      margin-left: auto;
+      text-align: center;
+      color: c.$anti-flash-white;
+    }
+
+    h3 {
+      margin-left: 0px;
+      text-align: center;
+      color: c.$dark-sienna;
+    }
+
+    img {
+      margin-left: 25px;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      box-shadow: 3px 5px 15px c.$smoky-black;
+    }
+  }
+
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid c.$smoky-black;
+    border-radius: 10px;
+    transition: all 0.25s ease-out;
+  }
+  &::before {
+    background-color: c.$dark-sienna;
+    top: -15px;
+    left: -15px;
+  }
+  &::after {
+    bottom: -15px;
+    right: -15px;
+  }
+  &:hover {
+    &::before {
+      top: 15px;
+      left: 15px;
+    }
+    &::after {
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+}
