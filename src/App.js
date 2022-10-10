@@ -7,6 +7,7 @@ import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipe";
 import CookingStyleCards from "./components/CookingStyleCards/CookingStyleCards";
 import CuttingStyleCards from "./components/CuttingStyleCards/CuttingStyleCards";
 import KnivesCards from "./components/KnivesCards/KnivesCards";
+import PotsAndPansCards from "./components/PotsAndPansCards/PotsAndPansCards";
 
 import "./App.scss";
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/cookingstyles" element={<CookingStyleCards />} />
           <Route exact path="/cuttingstyles" element={<CuttingStyleCards />} />
           <Route exact path="/knives" element={<KnivesCards />} />
+          <Route exact path="/potsandpans" element={<PotsAndPansCards />} />
         </Route>
       </Routes>
     </>
