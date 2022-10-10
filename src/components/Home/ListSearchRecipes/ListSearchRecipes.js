@@ -1,5 +1,5 @@
 import React from "react";
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeCard from "../../../pages/RecipeCard/RecipeCard";
 import "./ListSearchRecipes.scss";
 
 const ListSearchRecipes = ({ searchResults }) => {

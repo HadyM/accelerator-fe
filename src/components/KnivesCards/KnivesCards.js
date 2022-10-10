@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getKnives } from "../../util/apiURL";
-import KnivesCard from "../KnivesCard/KnivesCard";
+import KnivesCard from "../../pages/KnivesCard/KnivesCard";
 import Loader from "react-loaders";
 
 import "./KnivesCards.scss";

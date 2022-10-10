@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { TbSlice } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
-import Cookbook from "../../assets/images/cookbook.png";
+import Cookbook from "../../../assets/images/cookbook.png";
 
 import "./Navbar.scss";
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCookingStyles } from "../../util/apiURL";
-import CookingStyleCard from "../CookingStyleCard/CookingStyleCard";
+import CookingStyleCard from "../../pages/CookingStyleCard/CookingStyleCard";
 import Loader from "react-loaders";
 
 import "./CookingStyleCards.scss";

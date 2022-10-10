@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCuttingStyles } from "../../util/apiURL";
-import CuttingStyleCard from "../CuttingStyleCard/CuttingStyleCard";
+import CuttingStyleCard from "../../pages/CuttingStyleCard/CuttingStyleCard";
 import Loader from "react-loaders";
 
 import "./CuttingStyleCards.scss";

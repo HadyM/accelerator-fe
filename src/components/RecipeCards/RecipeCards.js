@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getRecipes } from "../../util/apiURL";
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeCard from "../../pages/RecipeCard/RecipeCard";
 import Loader from "react-loaders";
 
 import "./RecipeCards.scss";

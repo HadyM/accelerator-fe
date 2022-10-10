@@ -1,7 +1,7 @@
 import { getRecipes } from "../../util/apiURL";
 import { useState, useEffect } from "react";
-import SearchBar from "../SearchBar/SearchBar";
-import ListSearchRecipes from "../ListSearchRecipes/ListSearchRecipes";
+import SearchBar from "./SearchBar/SearchBar";
+import ListSearchRecipes from "./ListSearchRecipes/ListSearchRecipes";
 import Loader from "react-loaders";
 
 import "./Home.scss";

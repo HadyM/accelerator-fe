@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getPotsAndPans } from "../../util/apiURL";
-import PotsAndPansCard from "../PotsAndPansCard/PotsAndPansCard";
+import PotsAndPansCard from "../../pages/PotsAndPansCard/PotsAndPansCard";
 import Loader from "react-loaders";
 
 import "./PotsAndPansCards.scss";

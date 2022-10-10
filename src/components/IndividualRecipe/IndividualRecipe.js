@@ -3,8 +3,8 @@ import { useParams, useLocation } from "react-router-dom";
 import { getRecipeId } from "../../util/apiURL";
 import Loader from "react-loaders";
 
-import ComponentToPrint from "../IndividualRecipeLayout/ComponentToPrint/ComponentToPrint";
-import IndividualRecipeLayout from "../IndividualRecipeLayout/IndividualRecipeLayout";
+import ComponentToPrint from "./IndividualRecipeLayout/ComponentToPrint/ComponentToPrint";
+import IndividualRecipeLayout from "./IndividualRecipeLayout/IndividualRecipeLayout";
 
 import "./IndividualRecipe.scss";
 
