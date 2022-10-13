@@ -8,7 +8,7 @@ import "./RecipeCards.scss";
 
 const RecipeCards = () => {
   const [recipes, setRecipes] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   let cookingStyle = searchParams.get("cookingstyle") || "All";
   // console.log(searchParams.get("cookingstyle"));
