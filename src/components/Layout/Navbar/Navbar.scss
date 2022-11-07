@@ -135,4 +135,9 @@ nav {
   &:first-child {
     margin-top: 10px;
   }
+
+  &:hover {
+    color: c.$anti-flash-white;
+    background-color: c.$dark-sienna;
+  }
 }
