@@ -1,13 +1,8 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBook,
-  faHome,
-  faKitchenSet,
-  faSpoon,
-  faUtensils,
-} from "@fortawesome/free-solid-svg-icons";
-import { TbSlice } from "react-icons/tb";
+import { faBook, faHome, faSpoon } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 import Cookbook from "../../../assets/images/cookbook.png";
 
 import "./Navbar.scss";
@@ -44,30 +39,34 @@ const Navbar = () => {
           >
             <FontAwesomeIcon icon={faSpoon} />
           </NavLink>
-          <NavLink
-            exact="true"
-            activeclassname="active"
-            className="cuttingstyle-link"
-            to="/cuttingstyles"
-          >
-            <FontAwesomeIcon icon={faUtensils} />
-          </NavLink>
-          <NavLink
-            exact="true"
-            activeclassname="active"
-            className="knife-link"
-            to="/knives"
-          >
-            <TbSlice className="knife-link" />
-          </NavLink>
-          <NavLink
-            exact="true"
-            activeclassname="active"
-            className="potandpan-link"
-            to="/potsandpans"
-          >
-            <FontAwesomeIcon icon={faKitchenSet} />
-          </NavLink>
+          <div>
+            <Dropdown className="d-inline mx-2" autoClose="inside">
+              <Dropdown.Toggle
+                className="DropDownMenu"
+                id="dropdown-autoclose-inside"
+              >
+                Info
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item className="DropDownMenuItems" href="/knives">
+                  Knives
+                </Dropdown.Item>
+                <Dropdown.Item
+                  className="DropDownMenuItems"
+                  href="/potsandpans"
+                >
+                  Pots & Pans
+                </Dropdown.Item>
+                <Dropdown.Item
+                  className="DropDownMenuItems"
+                  href="/cuttingstyles"
+                >
+                  Cutting Styles
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
         </nav>
       </div>
     </>
