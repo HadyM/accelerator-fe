@@ -11,7 +11,7 @@ const ListSearchRecipes = ({ searchResults }) => {
     results
   ) : (
     <article>
-      <h1>No Matching Recipes! Please Try Again</h1>
+      <h1>No Matching Recipes! Please Try Again.</h1>
     </article>
   );
 

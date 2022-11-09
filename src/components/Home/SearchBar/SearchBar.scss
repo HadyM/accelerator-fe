@@ -16,6 +16,10 @@ header {
   font-size: 1rem;
   display: flex;
   flex-flow: row nowrap;
+
+  input:focus::placeholder {
+    color: transparent;
+  }
 }
 
 .Search:focus-within {

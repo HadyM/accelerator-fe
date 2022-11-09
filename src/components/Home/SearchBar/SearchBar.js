@@ -24,6 +24,7 @@ const SearchBar = ({ recipes, setSearchResults }) => {
       <form className="Search" onSubmit={handleSubmit}>
         <input
           className="SearchInput"
+          placeholder="Search For Some Amazing Recipes...."
           type="text"
           id="search"
           onChange={handleSearchChange}

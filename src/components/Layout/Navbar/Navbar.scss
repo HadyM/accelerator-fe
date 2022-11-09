@@ -121,6 +121,10 @@ nav {
   background-color: c.$anti-flash-white;
   border: none;
 
+  &:focus {
+    background-color: c.$dark-sienna;
+  }
+
   &:hover {
     background-color: c.$dark-sienna;
   }
