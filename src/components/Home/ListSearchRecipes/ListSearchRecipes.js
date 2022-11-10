@@ -7,13 +7,14 @@ const ListSearchRecipes = ({ searchResults }) => {
     <RecipeCard key={recipe.id} recipe={recipe} />
   ));
 
-  const content = results?.length ? (
-    results
-  ) : (
-    <article>
-      <h1>No Matching Recipes! Please Try Again.</h1>
-    </article>
-  );
+  const content =
+    results?.length && results !== "" ? (
+      results
+    ) : (
+      <div className="NoResults">
+        <h1>No Matching Recipes! Please Try Again.</h1>
+      </div>
+    );
 
   return <main className="RecipeCardList">{content}</main>;
 };

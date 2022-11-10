@@ -1,11 +1,12 @@
 @use "../../../assets/colors/colorpalette" as c;
 
-article {
+.NoResults {
   margin: 1em;
   padding: 1em;
   background-color: c.$dark-sienna;
   color: c.$anti-flash-white;
   border-radius: 15px;
+  animation: fadeIn 7s;
 }
 
 .RecipeCardList {
