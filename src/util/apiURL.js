@@ -14,6 +14,21 @@ export const getRecipeId = async () => {
   return response.data.payload;
 };
 
+export const addRecipe = async (newrecipe) => {
+  const response = await apiURL.post("/recipes", newrecipe);
+  return response.data.payload;
+};
+
+export const updateRecipe = async (updaterecipe, id) => {
+  const response = await apiURL.put(`/recipes/${id}`, updaterecipe);
+  return response.data.payload;
+};
+
+export const deleteRecipe = async (id) => {
+  const response = await apiURL.delete(`/recipes/${id}`, id);
+  return response.data.payload;
+};
+
 export const getCookingStyles = async () => {
   const response = await apiURL.get("/cookingstyles");
   return response.data.payload;
