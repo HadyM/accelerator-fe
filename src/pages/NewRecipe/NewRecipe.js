@@ -1,10 +1,15 @@
-import React from 'react'
-import "./NewRecipe.scss"
+import React from "react";
+import NewRecipeForm from "../../components/NewRecipeForm/NewRecipeForm";
+
+import "./NewRecipe.scss";
 
 const NewRecipe = () => {
   return (
-    <div>NewRecipe</div>
-  )
-}
+    <div className="NewForm">
+      <h1>Add A Delicious Recipe</h1>
+      <NewRecipeForm />
+    </div>
+  );
+};
 
-export default NewRecipe
+export default NewRecipe;

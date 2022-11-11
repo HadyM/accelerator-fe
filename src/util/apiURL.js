@@ -15,8 +15,7 @@ export const getRecipeId = async () => {
 };
 
 export const addRecipe = async (newrecipe) => {
-  const response = await apiURL.post("/recipes", newrecipe);
-  return response.data.payload;
+  return await apiURL.post("/recipes", newrecipe);
 };
 
 export const updateRecipe = async (updaterecipe, id) => {
