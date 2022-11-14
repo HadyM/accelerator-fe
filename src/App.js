@@ -21,7 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route exact path="/recipes" element={<RecipeCards />} />
           <Route path="/recipes/:id" element={<IndividualRecipe />} />
-          <Route exact path="/recipes/new" element={<NewRecipe />} />
+          <Route exact path="/recipes/newrecipe" element={<NewRecipe />} />
           <Route exact path="/cookingstyles" element={<CookingStyleCards />} />
           <Route exact path="/cuttingstyles" element={<CuttingStyleCards />} />
           <Route exact path="/knives" element={<KnivesCards />} />

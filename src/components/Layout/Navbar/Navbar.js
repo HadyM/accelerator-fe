@@ -18,14 +18,6 @@ const Navbar = () => {
           <NavLink
             exact="true"
             activeclassname="active"
-            className="newrecipe-link"
-            to="/recipes/new"
-          >
-            <FontAwesomeIcon icon={faBook} />
-          </NavLink>
-          <NavLink
-            exact="true"
-            activeclassname="active"
             to="/"
             className="Home"
           >
@@ -71,6 +63,12 @@ const Navbar = () => {
                   href="/cuttingstyles"
                 >
                   Cutting Styles
+                </Dropdown.Item>
+                <Dropdown.Item
+                  className="DropDownMenuItems"
+                  href="recipes/newrecipe"
+                >
+                  Add New Recipe
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
