@@ -26,6 +26,10 @@
         font-weight: 500;
         color: c.$smoky-black;
       }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
 
     .InputText {
