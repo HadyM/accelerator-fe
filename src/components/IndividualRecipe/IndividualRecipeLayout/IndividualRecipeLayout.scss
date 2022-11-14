@@ -68,4 +68,28 @@
     font-weight: lighter;
     font-size: 13px;
   }
+
+  .IndividualRecipeButtons {
+    display: flex;
+    flex-direction: row;
+    float: right;
+
+    button {
+      font-size: 14px;
+      width: 110px;
+      color: c.$dark-sienna;
+      font-family: Coolvetica;
+      font-weight: 700;
+      background-color: c.$grullo;
+      border: 2px solid c.$smoky-black;
+      border-radius: 5px;
+      box-shadow: 2px 3px 6px c.$dark-sienna;
+    }
+
+    button:hover {
+      color: c.$anti-flash-white;
+      background-color: c.$smoky-black;
+      box-shadow: 2px 3px 6px c.$anti-flash-white;
+    }
+  }
 }

@@ -1,22 +1,31 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./IndividualRecipeLayout.scss";
 
-const IndividualRecipeLayout = ({ recipe }) => {
-  // let navigate = useNavigate();
+const IndividualRecipeLayout = ({ recipe, deleteIndividualRecipe, id }) => {
+  let navigate = useNavigate();
   let recipeInstructions = recipe.instructions?.split(/\s(?=Step)/gi);
   let recipeIngredients = recipe.ingredients?.split(",");
 
-  // const handleGoBack = (e) => {
-  //   e.preventDefault();
-  //   navigate("/recipes");
-  // };
+  const handleGoBack = (e) => {
+    e.preventDefault();
+    navigate("/recipes");
+  };
+
+  const handleDelete = () => {
+    deleteIndividualRecipe(id);
+    navigate("/recipes");
+  };
 
   return (
     <>
       <div className="IndividualRecipeLayout">
+        <div className="IndividualRecipeButtons">
+          <button onClick={handleGoBack}>Back to Recipes</button>
+          <button>Update Recipe</button>
+          <button onClick={handleDelete}>Delete Recipe</button>
+        </div>
         <div className="TitleImage">
-          {/* <button onClick={handleGoBack}>Back to Recipes</button> */}
           <div>
             <h1>{recipe.title}</h1>
           </div>

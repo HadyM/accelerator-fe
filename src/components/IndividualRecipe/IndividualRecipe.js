@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { getRecipeId } from "../../util/apiURL";
+import { getRecipeId, deleteRecipe } from "../../util/apiURL";
 import Loader from "react-loaders";
 
 import ComponentToPrint from "./IndividualRecipeLayout/ComponentToPrint/ComponentToPrint";
@@ -25,6 +25,19 @@ const IndividualRecipe = () => {
       });
   };
 
+  const deleteIndividualRecipe = (id) => {
+    deleteRecipe(id).then(
+      (response) => {
+        const updateArray = [...recipe];
+        updateArray.splice(id, 1);
+        setRecipe(updateArray);
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
+  };
+
   useEffect(() => {
     if (Object.keys(recipe).length === 0) {
       fetchRecipe(recipeId);
@@ -38,7 +51,11 @@ const IndividualRecipe = () => {
           <div>
             <ComponentToPrint recipe={recipe} />
           </div>
-          <IndividualRecipeLayout recipe={recipe} />
+          <IndividualRecipeLayout
+            id={recipeId}
+            recipe={recipe}
+            deleteIndividualRecipe={deleteIndividualRecipe}
+          />
         </section>
       </div>
       <Loader type="ball-scale-multiple" />
