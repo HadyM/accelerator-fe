@@ -44,8 +44,6 @@ const NewRecipeForm = () => {
     navigate("/recipes");
   };
 
-  console.log(newRecipe);
-
   return (
     <>
       <div className="NewFormDetails">
