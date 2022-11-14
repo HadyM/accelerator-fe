@@ -17,12 +17,16 @@ const IndividualRecipeLayout = ({ recipe, deleteIndividualRecipe, id }) => {
     navigate("/recipes");
   };
 
+  const updateRecipe = () => {
+    navigate(`/recipes/${id}/updaterecipe`);
+  };
+
   return (
     <>
       <div className="IndividualRecipeLayout">
         <div className="IndividualRecipeButtons">
           <button onClick={handleGoBack}>Back to Recipes</button>
-          <button>Update Recipe</button>
+          <button onClick={updateRecipe}>Update Recipe</button>
           <button onClick={handleDelete}>Delete Recipe</button>
         </div>
         <div className="TitleImage">
