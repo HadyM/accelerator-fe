@@ -122,6 +122,7 @@ nav {
   border: none;
 
   &:focus {
+    color: c.$anti-flash-white;
     background-color: c.$dark-sienna;
   }
 
