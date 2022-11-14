@@ -99,18 +99,29 @@ const NewRecipeForm = () => {
           </Form.Group>
           <Form.Group>
             <Form.Label>Recipe Cooking Style</Form.Label>
-            <Form.Control
+            <Form.Select
+              aria-label="Default select example"
               id="cookingstyle"
-              type="text"
               value={newRecipe.cookingstyle}
               onChange={handleInput}
-              placeholder="Enter Cooking Style"
               required
-            />
+            >
+              <option>Select a cooking style....</option>
+              <option value="grilling">Grilling</option>
+              <option value="broiling">Broiling</option>
+              <option value="baking">Baking</option>
+              <option value="roasting">Roasting</option>
+              <option value="sauteing">Sauteing</option>
+              <option value="searing">Searing</option>
+              <option value="frying">Frying</option>
+              <option value="boiling">Boiling</option>
+              <option value="poaching">Poaching</option>
+              <option value="steaming">Steaming</option>
+              <option value="blanching">Blanching</option>
+              <option value="sous vide">Sous Vide</option>
+            </Form.Select>
             <Form.Text className="text-muted">
-              Please enter one of the following "Grilling, Broiling, Baking,
-              Roasting, Sauteing, Searing, Frying, Boiling, Poaching, Steaming,
-              Blanching, or Sous Vide"
+              Please enter one of the following styles
             </Form.Text>
           </Form.Group>
           <Form.Group>
