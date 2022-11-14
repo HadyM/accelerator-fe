@@ -61,7 +61,7 @@ const EditRecipeForm = () => {
 
   return (
     <>
-      <div className="EditFormDetails">
+      <div className="UpdateFormDetails">
         <Form onSubmit={handleSubmit} className="Form">
           <Form.Group className="InputContainer">
             <Form.Label className="InputTitle">Recipe Title</Form.Label>
@@ -69,7 +69,7 @@ const EditRecipeForm = () => {
               id="title"
               type="text"
               className="InputBox"
-              value={editRecipe.title}
+              value={editRecipe.title || ""}
               onChange={handleInput}
               placeholder="Enter Recipe Title...."
               required
@@ -84,7 +84,7 @@ const EditRecipeForm = () => {
               id="image"
               type="url"
               className="InputBox"
-              value={editRecipe.image}
+              value={editRecipe.image || ""}
               onChange={handleInput}
               placeholder="Enter Recipe Image URL...."
               required
@@ -99,7 +99,7 @@ const EditRecipeForm = () => {
               id="description"
               type="text"
               className="InputBox"
-              value={editRecipe.description}
+              value={editRecipe.description || ""}
               onChange={handleInput}
               placeholder="Enter Recipe Description...."
               required
@@ -114,7 +114,7 @@ const EditRecipeForm = () => {
               id="time"
               type="text"
               className="InputBox"
-              value={editRecipe.time}
+              value={editRecipe.time || ""}
               onChange={handleInput}
               placeholder="Enter Recipe Time...."
               required
@@ -157,7 +157,7 @@ const EditRecipeForm = () => {
               id="ingredients"
               type="text"
               className="InputBox"
-              value={editRecipe.ingredients}
+              value={editRecipe.ingredients || ""}
               onChange={handleInput}
               placeholder="Enter Ingredient List...."
               required
@@ -173,7 +173,7 @@ const EditRecipeForm = () => {
               id="instructions"
               type="text"
               className="InputBox"
-              value={editRecipe.instructions}
+              value={editRecipe.instructions || ""}
               onChange={handleInput}
               placeholder="Enter Instruction Description...."
               required

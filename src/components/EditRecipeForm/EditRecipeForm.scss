@@ -1,6 +1,6 @@
 @use "../../assets/colors/colorpalette" as c;
 
-.EditFormDetails {
+.UpdateFormDetails {
   .InputContainer {
     .InputTitle {
       color: c.$dark-sienna;
@@ -21,15 +21,15 @@
       border-radius: 10px;
       box-shadow: 0 0 10px 4px c.$smoky-black;
 
-      //   &::placeholder {
-      //     font-size: 15px;
-      //     font-weight: 500;
-      //     color: c.$smoky-black;
-      //   }
+      &::placeholder {
+        font-size: 15px;
+        font-weight: 500;
+        color: c.$smoky-black;
+      }
 
-      //   &:focus::placeholder {
-      //     color: transparent;
-      //   }
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
 
     .InputText {

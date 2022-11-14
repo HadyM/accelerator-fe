@@ -7,7 +7,7 @@ import "./EditRecipe.scss";
 const EditRecipe = () => {
   return (
     <>
-      <div className="EditRecipe">
+      <div className="UpdateRecipe">
         <h1>Update Recipe</h1>
         <EditRecipeForm />
       </div>
