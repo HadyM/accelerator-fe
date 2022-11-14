@@ -19,16 +19,6 @@ const NewRecipeForm = () => {
 
   const navigate = useNavigate();
 
-  const addNewRecipe = () => {
-    addRecipe()
-      .then((response) => {
-        setNewRecipe([...newRecipe, setNewRecipe]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const handleInput = (e) => {
     const { value } = e.target;
     setNewRecipe({ ...newRecipe, [e.target.id]: value });
@@ -36,13 +26,25 @@ const NewRecipeForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setNewRecipe(addNewRecipe);
+    addNewRecipe(newRecipe);
     navigate("/recipes");
+  };
+
+  const addNewRecipe = (newrecipe) => {
+    addRecipe(newrecipe)
+      .then((response) => {
+        setNewRecipe([...newRecipe, newrecipe]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleCancel = () => {
     navigate("/recipes");
   };
+
+  console.log(newRecipe);
 
   return (
     <>
@@ -96,26 +98,20 @@ const NewRecipeForm = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group>
+            <Form.Label>Recipe Cooking Style</Form.Label>
             <Form.Control
               id="cookingstyle"
+              type="text"
               value={newRecipe.cookingstyle}
               onChange={handleInput}
+              placeholder="Enter Cooking Style"
               required
             />
-            <Form.Select aria-label="Default select example">
-              <option value="grilling">Grilling</option>
-              <option value="broiling">Broiling</option>
-              <option value="baking">Baking</option>
-              <option value="roasting">Roasting</option>
-              <option value="sauteing">Sauteing</option>
-              <option value="searing">Searing</option>
-              <option value="frying">Frying</option>
-              <option value="boiling">Boiling</option>
-              <option value="poaching">Poaching</option>
-              <option value="steaming">Steaming</option>
-              <option value="blanching">Blanching</option>
-              <option value="sous vide">Sous Vide</option>
-            </Form.Select>
+            <Form.Text className="text-muted">
+              Please enter one of the following "Grilling, Broiling, Baking,
+              Roasting, Sauteing, Searing, Frying, Boiling, Poaching, Steaming,
+              Blanching, or Sous Vide"
+            </Form.Text>
           </Form.Group>
           <Form.Group>
             <Form.Label>Recipe Ingredients</Form.Label>
