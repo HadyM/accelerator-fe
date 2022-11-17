@@ -7,6 +7,8 @@ import Button from "react-bootstrap/Button";
 import "./EditRecipeForm.scss";
 
 const EditRecipeForm = () => {
+  let { id } = useParams();
+
   const [editRecipe, setEditRecipe] = useState({
     title: "",
     image: "",
@@ -18,7 +20,6 @@ const EditRecipeForm = () => {
   });
 
   let navigate = useNavigate();
-  let { id } = useParams();
 
   const handleInput = (e) => {
     const { value } = e.target;
