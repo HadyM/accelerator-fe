@@ -9,8 +9,8 @@ export const getRecipes = async () => {
   return response.data.payload;
 };
 
-export const getRecipeId = async () => {
-  const response = await apiURL.get("/recipes/:id");
+export const getRecipeId = async (id) => {
+  const response = await apiURL.get(`/recipes/${id}`);
   return response.data.payload;
 };
 
