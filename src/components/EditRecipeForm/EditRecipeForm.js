@@ -29,15 +29,13 @@ const EditRecipeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateIndividualRecipe(editRecipe, id);
-    navigate(`/recipes/${id}`);
+    navigate(`/recipes/${id}`, { state: { recipe: editRecipe } });
   };
 
   const updateIndividualRecipe = (updaterecipe, id) => {
     updateRecipe(updaterecipe, id).then(
       (response) => {
-        const updateArray = [...editRecipe];
-        updateArray[id] = updaterecipe;
-        setEditRecipe(updateArray);
+        setEditRecipe(response);
       },
       (error) => {
         console.log(error);

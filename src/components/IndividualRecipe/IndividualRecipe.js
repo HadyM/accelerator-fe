@@ -15,8 +15,8 @@ const IndividualRecipe = () => {
   let params = useParams();
   let recipeId = params.id;
 
-  const fetchRecipe = () => {
-    getRecipeId()
+  const fetchRecipe = (recipeId) => {
+    getRecipeId(recipeId)
       .then((response) => {
         setRecipe(response);
       })
@@ -28,9 +28,7 @@ const IndividualRecipe = () => {
   const deleteIndividualRecipe = (id) => {
     deleteRecipe(id).then(
       (response) => {
-        const updateArray = [...recipe];
-        updateArray.splice(id, 1);
-        setRecipe(updateArray);
+        setRecipe(response);
       },
       (error) => {
         console.log(error);

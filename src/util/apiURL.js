@@ -19,11 +19,13 @@ export const addRecipe = async (newrecipe) => {
 };
 
 export const updateRecipe = async (updaterecipe, id) => {
-  return await apiURL.put(`/recipes/${id}`, updaterecipe);
+  const response = await apiURL.put(`/recipes/${id}`, updaterecipe);
+  return response.data.payload;
 };
 
 export const deleteRecipe = async (id) => {
-  return await apiURL.delete(`/recipes/${id}`, id);
+  const response = await apiURL.delete(`/recipes/${id}`, id);
+  return response.data.payload;
 };
 
 export const getCookingStyles = async () => {
