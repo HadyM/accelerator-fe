@@ -103,6 +103,16 @@ nav {
     }
   }
 
+  a.signin-link {
+    font-size: 25px;
+    left: 510px;
+
+    &:after {
+      display: block;
+      content: "Sign In";
+    }
+  }
+
   a.active {
     svg {
       color: c.$dark-sienna;

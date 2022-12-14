@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook, faHome, faSpoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faHome,
+  faSpoon,
+  faSignIn,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import Cookbook from "../../../assets/images/cookbook.png";
@@ -38,6 +43,14 @@ const Navbar = () => {
             to="/cookingstyles"
           >
             <FontAwesomeIcon icon={faSpoon} />
+          </NavLink>
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="signin-link"
+            to="/signin"
+          >
+            <FontAwesomeIcon icon={faSignIn} />
           </NavLink>
           <div>
             <Dropdown className="d-inline mx-2" autoClose="inside">
